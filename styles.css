@@ -1,0 +1,284 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3AAFA9; /* Updated background color for light theme */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #DEF2F1; /* Updated navbar background color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; /* Adjusted height for the navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+ul.navbar li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensures the li elements are the same height as the navbar */
+}
+
+ul.navbar li.right {
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+ul.navbar li a, ul.navbar li button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the text */
+    color: #17252A; /* Updated text color */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: 100%; /* Ensures the a and button elements are the same height as the navbar */
+    padding: 0 16px; /* Add padding for spacing */
+    transition: background-color 0.3s;
+}
+
+ul.navbar li a:hover:not(.active), ul.navbar li button:hover {
+    background-color: #2B7A78; /* Updated hover background color */
+    color: #FEFFFF; /* Updated hover text color */
+}
+
+ul.navbar li a.active {
+    background-color: #2B7A78; /* Updated active background color */
+    color: #FEFFFF; /* Updated active text color */
+}
+
+.welcome-box {
+    background-color: #2B7A78; /* Updated background color */
+    color: #FEFFFF; /* Updated text color */
+    font-weight: bold;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.toggle-box {
+    background-color: #2B7A78; /* Updated background color */
+    color: #FEFFFF; /* Updated text color */
+    font-weight: bold;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    transition: background-color 0.3s;
+}
+
+.toggle-box:hover {
+    background-color: #17252A; /* Updated hover background color */
+    color: #FEFFFF; /* Updated hover text color */
+}
+
+.container {
+    padding: 20px;
+    margin: 80px auto 20px auto; /* Adjust top margin for fixed navbar */
+    max-width: 600px;
+    background-color: #DEF2F1; /* Updated container background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header h1 {
+    margin: 0 auto;
+    color: #17252A; /* Updated header text color */
+}
+
+.back-button {
+    position: absolute;
+    left: 10px;
+    background-color: #2B7A78; /* Updated background color */
+    padding: 10px;
+    color: #FEFFFF; /* Updated text color */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #17252A; /* Updated hover background color */
+}
+
+.error-message {
+    background-color: #ffcccc;
+    color: #cc0000;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success-message {
+    background-color: #ccffcc;
+    color: #008000;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1 1 45%;
+    margin: 10px 0;
+}
+
+.form-group.full-width {
+    flex: 1 1 100%;
+}
+
+.course-checkboxes {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.label, .course-checkboxes label {
+    display: block;
+    margin: 5px 0;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button, input[type="submit"] {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #2B7A78; /* Updated button background color */
+    color: #FEFFFF; /* Updated button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button:hover, input[type="submit"]:hover {
+    background-color: #17252A; /* Updated button hover background color */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #2B7A78; /* Updated table header background color */
+    color: #FEFFFF; /* Updated table header text color */
+}
+
+td {
+    background-color: #DEF2F1; /* Updated table cell background color */
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #0B0C10; /* Updated background color for dark theme */
+    color: #C5C6C7; /* Updated text color for dark theme */
+}
+
+body.dark-mode ul.navbar {
+    background-color: #1F2833; /* Updated navbar background color for dark theme */
+}
+
+body.dark-mode ul.navbar li a, body.dark-mode ul.navbar li button {
+    color: #C5C6C7; /* Updated text color for dark theme */
+}
+
+body.dark-mode ul.navbar li a:hover:not(.active), body.dark-mode ul.navbar li button:hover {
+    background-color: #45A29E; /* Updated hover background color for dark theme */
+    color: #FEFFFF; /* Updated hover text color for dark theme */
+}
+
+body.dark-mode ul.navbar li a.active {
+    background-color: #66FCF1; /* Updated active background color for dark theme */
+    color: #0B0C10; /* Updated active text color for dark theme */
+}
+
+body.dark-mode .welcome-box, body.dark-mode .toggle-box {
+    background-color: #66FCF1; /* Updated background color for dark theme */
+    color: #0B0C10; /* Updated text color for dark theme */
+}
+
+body.dark-mode .container {
+    background-color: #1F2833; /* Updated container background color for dark theme */
+}
+
+body.dark-mode h1 {
+    color: #66FCF1; /* Updated header text color for dark theme */
+}
+
+body.dark-mode .button, body.dark-mode input[type="submit"] {
+    background-color: #66FCF1; /* Updated button background color for dark theme */
+    color: #0B0C10; /* Updated button text color for dark theme */
+}
+
+body.dark-mode .button:hover, body.dark-mode input[type="submit"]:hover {
+    background-color: #45A29E; /* Updated button hover background color for dark theme */
+}
+
+body.dark-mode table, body.dark-mode th, body.dark-mode td {
+    border-color: #444;
+}
+
+body.dark-mode th {
+    background-color: #66FCF1; /* Updated table header background color for dark theme */
+}
+
+body.dark-mode td {
+    background-color: #1F2833; /* Updated table cell background color for dark theme */
+}
